@@ -1,0 +1,13 @@
+= link_to image_tag('logo_small.png', title:"OKey House", alt:'OKey House', id: 'logo_image'), root_path
+
+ul#left_menu
+	- @categories.each do |category|
+		- selected_cat 	= category.id.to_s==params[:category_id].to_s&&!@subcategory ? 'selected' : nil 
+		li class= "#{'li_selected' if category.id.to_s==params[:category_id].to_s}"
+			= link_to category.name, category_path(category.name), class: selected_cat
+			- if @subcategories && category.id.to_s==@category.id.to_s
+				ul style=""
+					- @subcategories.each do |subcat|
+						- selected_subcat = subcat.id.to_s==params[:subcategory_id].to_s ? 'selected' : nil 
+						li style="background-color:#efefef; padding-right:38px; margin-right:-18px"
+							= link_to subcat.name+'-', subcategory_path(category.name, subcat.name), class: selected_subcat

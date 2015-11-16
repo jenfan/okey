@@ -1,0 +1,22 @@
+#left_menu {
+  border: 1px solid black;
+  text-align: left;
+  margin-top: 20px;
+  padding: 20px;
+  text-decoration: none;
+  list-style: none;
+  li {
+    margin: 10px;
+  }
+  a {
+    color: #000;
+    font-size: 15px;
+  }
+}
+
+#logo_image {
+  margin-top: 20px;
+  width: 120px;
+  height: 100px;
+}
+

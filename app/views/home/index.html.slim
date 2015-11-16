@@ -1,0 +1,10 @@
+.news
+	h2 Новости
+	- @news.each do |one|
+		p == one.date.to_s + '<br>' + one.body
+- @posts.each do |post|
+	.articles
+		= link_to image_tag(post.img)
+		h2 = link_to post.title, post_path(post)
+		p== post.mini_description
+		.clear

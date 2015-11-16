@@ -1,0 +1,37 @@
+=render 'layouts/breadcrumbs'
+h1 = @category.name if @category
+
+
+/ ul.products
+/ 	-@products.each do |item|
+/ 		li.product
+/ 			.image = image_tag(item.img(:medium))
+/ 			.product_info
+/ 				h3 = link_to item.name, product_path(item)
+/ 				.annotation
+/ 					p
+/ 						=item.description
+
+
+-if @products.empty?
+	p Товаров не найдено
+-@products.in_groups_of(2) do |product|
+	.container
+		.row#products
+			- if product[0]
+				.six.columns
+					=link_to product[0] do
+						.image = image_tag(product[0].img(:medium), size:"250x250")
+					p=product[0].name
+					p
+						|Цена:
+						=product[0].price
+			- if product[1]
+				.six.columns
+					=link_to product[1] do
+						.image = image_tag(product[1].img(:medium), size:"250x250")
+					p=product[1].name
+					p
+						|Цена:
+						=product[1].price
+			

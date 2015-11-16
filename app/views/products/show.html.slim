@@ -1,0 +1,10 @@
+=render 'layouts/breadcrumbs'
+h1= @product.name
+.product
+	.image = image_tag @product.img.url(:medium)
+	.description
+		p
+			span= @product.description
+			br
+			br
+			span= 'Цена: '+@product.price.to_s+'p'

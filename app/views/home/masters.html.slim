@@ -1,0 +1,8 @@
+h1 Мастер-классы
+- @masters.each do |one|
+	.master
+	=link_to one do
+		h3 = one.name
+	=image_tag one.img.url(:thumb), style:"padding:20px"
+	p style='float:left' == one.description
+	hr

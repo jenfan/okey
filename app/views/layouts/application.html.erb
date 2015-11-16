@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Okey</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class= <%='home' if controller.controller_name=='home' && action_name=='index'%> >
+
+<%= render 'layouts/document' %>
+<%#= render 'layouts/top_menu' %>
+<%#= render 'layouts/body' %>
+<%#= render 'layouts/slider'  %>
+
+</body>
+</html>

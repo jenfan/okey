@@ -1,0 +1,11 @@
+#path = render_breadcrumbs :separator => ' → '
+h1 = @subcategory.name
+ul.products
+	-@products.each do |item|
+		li.product
+			.image = image_tag(item.img(:medium))
+			.product_info
+				h3 = link_to item.name, product_path(item)
+				.annotation
+					p
+						=item.description

@@ -1,0 +1,32 @@
+#top_menu
+  /p | +7 (495) 593 43 73
+  ul
+    li class="selected"
+      = link_to "Главная", root_path
+    li
+      = link_to "Мастер-классы", masters_path
+    li
+      = link_to "Новости", news_path
+    li
+      = link_to "Контакты", contacts_path
+.row
+  .col-md-6.padding20
+    ol.breadcrumb
+      li 
+       a href="#" Home
+      li
+        a href="#" Library
+      li
+        a href="#" Data
+  .col-md-6.padding20
+    .input-group
+      input type="text" class="form-control" placeholder="Поиск"
+      span.input-group-btn
+        button class="btn btn-default" type="button"
+          span.glyphicon.glyphicon-search aria-hidden="true"
+.col-md-12.text-center
+	#content
+		==yield
+	.clear
+	.footer_top
+		=render 'layouts/footer_top'

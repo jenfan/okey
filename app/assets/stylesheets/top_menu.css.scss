@@ -1,0 +1,38 @@
+#top_header {
+  background-color: #43A047;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 70px;
+  .container {
+    max-width: 700px;
+    min-width: 600px;
+  }
+}
+
+#top_menu {
+  position: relative;
+  height: 70px;
+  width: 100%;
+  ul {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    text-align: justify;
+    li {
+      display: inline-block;
+      margin-right: 90px;
+      padding-bottom: 5px; 
+      border-bottom: 2px solid #43A047;
+      a {
+        color: white !important;
+        font-size: 16px;
+        text-decoration: none;
+      }
+      &:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+  }  
+}
