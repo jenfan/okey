@@ -16,6 +16,7 @@ gem 'tinymce-rails'
 #deploy
 gem 'capistrano', github: 'capistrano/capistrano', ref: '96a16', group: :development
 gem 'unicorn' , group: :production
+gem 'mysql2', group: :production
 #debug
 gem 'newrelic_rpm', group: :development
 gem 'awesome_print', group: :development
