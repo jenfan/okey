@@ -123,7 +123,7 @@ GEM
     mimemagic (0.3.0)
     minitest (5.7.0)
     multi_json (1.11.1)
-    mysql2 (0.4.2)
+    mysql2 (0.3.20)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -241,7 +241,7 @@ DEPENDENCIES
   draper
   jbuilder (~> 2.0)
   jquery-rails
-  mysql2
+  mysql2 (~> 0.3.18)
   newrelic_rpm
   paperclip (~> 4.3)
   pundit
