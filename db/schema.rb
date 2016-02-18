@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716133528) do
+ActiveRecord::Schema.define(version: 20160218195550) do
 
   create_table "actions", force: true do |t|
     t.string   "title"
@@ -93,6 +93,10 @@ ActiveRecord::Schema.define(version: 20150716133528) do
     t.string   "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
   end
 
   create_table "posts", force: true do |t|
@@ -121,6 +125,8 @@ ActiveRecord::Schema.define(version: 20150716133528) do
     t.datetime "updated_at"
     t.integer  "subcategory_id"
     t.boolean  "recommend"
+    t.boolean  "new"
+    t.boolean  "best"
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id"

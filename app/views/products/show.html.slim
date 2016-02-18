@@ -1,10 +1,11 @@
-=render 'layouts/breadcrumbs'
-h1= @product.name
-.product
-	.image = image_tag @product.img.url(:medium)
-	.description
-		p
-			span= @product.description
-			br
-			br
-			span= 'Цена: '+@product.price.to_s+'p'
+h1.text-center = @product.name
+br
+.col-md-5
+  .product-image = image_tag @product.img.url(:medium), size: '200x200'
+.col-md-7
+  .product-description
+  	p
+  		span= @product.description
+  		br
+  		br
+  		span= 'Цена: '+@product.price.to_s+'p'

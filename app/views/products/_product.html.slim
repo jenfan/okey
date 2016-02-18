@@ -1,0 +1,6 @@
+.col-md-3
+  = link_to product_path(product) do
+    .product.shadow
+      .image = image_tag product.img.url(:medium)
+      .title
+        span= product.name

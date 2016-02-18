@@ -1,0 +1,22 @@
+#footer {
+  margin-top: 40px;
+  background-color: #43A047;
+  height: 70px;
+  clear: both;
+  color: #fff;
+  a {
+      color: #fff;
+    }
+  span {
+    display: block;
+    text-align: right;
+    margin: 15px 0;
+  }
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin: 15px 0px 20px 40px;
+    }
+  }
+}

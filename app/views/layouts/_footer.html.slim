@@ -1,37 +1,10 @@
-.footer1
-	|Наш адрес: Московская Область,
-	br
-	|г Одинцово, Можайское шоссе,
-	br
-	|д 20-А 
-	br
-	|ТВЦ “Пирамида” 2 этаж
-	br
-	|c 10 00 до 20 00
-	br
-	|yes@okeyhouse.ru
-	br
-	=link_to "посмотреть на карте", '#', target:"_blank"
-	br
-	br
-	=link_to image_tag('map.jpg'), "#", target: "_blank"
-.footer2
-	<!-- Список товаров-->
-	strong Рекомендуемые товары
-	ul.small_products
-		-@recommend_products.each do |product|
-			li.product
-				.image
-					=link_to image_tag(product.img.url(:thumb), title:product.name), product_path(product)
-				b
-					=link_to product.name, product_path(product)
-		
-.footer3
-.clear
-.bottom_menu
+.col-md-7
   ul#bottom_menu
-		li = link_to 'Главная', ''
-		/ li = link_to 'Магазин', 'magazin'
-		li = link_to 'Мастер-классы', 'master'
-		li = link_to 'Новости', 'blog'
-		li = link_to 'Контакты', 'contact'
+    li = link_to 'Товары', products_path
+    li = link_to 'Мастер-классы', masters_path
+    li = link_to 'Новости', news_path
+    li = link_to 'Контакты', contacts_path
+.col-md-3 
+  span +7 (495) 593 43 73
+.col-md-2
+  span = link_to 'OkeyHouse', home_path

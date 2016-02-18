@@ -13,7 +13,13 @@ gem "paperclip", "~> 4.3"
 gem "breadcrumbs_on_rails"
 gem 'tinymce-rails'
 
-gem 'newrelic_rpm'
+#deploy
+gem 'capistrano', github: 'capistrano/capistrano', ref: '96a16', group: :development
+gem 'unicorn' , group: :production
+#debug
+gem 'newrelic_rpm', group: :development
+gem 'awesome_print', group: :development
+gem 'byebug', group: :development
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'

@@ -1,5 +1,12 @@
-h1 Новости
+.row
+  .col-md-12
+    | Новости
+    br
+    br
 - @news.each do |one|
-	h3 = one.title
-	p == one.date.to_s + '<br>' + one.body
-	hr
+  .col-md-12.hr.news
+    .col-md-4 = image_tag one.img, size:'180x180'
+    .col-md-8.news_item
+      h3 = one.title
+      p == one.body
+      .date == one.date.to_s

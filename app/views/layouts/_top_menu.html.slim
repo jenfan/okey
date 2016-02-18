@@ -1,0 +1,9 @@
+- menu = {'Товары'        => products_path ,
+          'Мастер-классы' => masters_path ,
+          'Новости'       => news_path ,
+          'Контакты'      => contacts_path }
+#top_menu
+  ul
+    - menu.each do |title, url|
+      li class= "#{current_page?(url) ? 'active' : 'active' }"
+        = link_to title, url

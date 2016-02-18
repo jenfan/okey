@@ -22,8 +22,8 @@
     text-align: justify;
     li {
       display: inline-block;
-      margin-right: 90px;
-      padding-bottom: 5px; 
+      margin-right: 50px;
+      padding-bottom: 5px;
       border-bottom: 2px solid #43A047;
       a {
         color: white !important;
@@ -34,5 +34,16 @@
         border-bottom: 2px solid white;
       }
     }
-  }  
+    .selected {
+      border-bottom: 2px solid white;
+    }
+  }
+}
+
+.breadcrumb {
+  padding: 20px 0;
+  li {
+    color: #999;
+    font-size: 12px;
+  }
 }

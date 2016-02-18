@@ -1,0 +1,11 @@
+//.row.text-center = image_tag 'products.png', class:'product_image'
+
+- { 'Новинки'     => @products_new,
+    'Хиты продаж' => @products_top,
+    nil           => @products }.each do |section, products|
+  - if products
+    - if section
+      .row
+        .col-md-12 = section
+    - products.each do |product|
+      = render 'products/product', product: product

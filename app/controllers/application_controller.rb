@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
     def render_er
       # raise RoutingError
-    
+
     end
 
 end
