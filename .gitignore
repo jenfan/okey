@@ -17,5 +17,6 @@
 
 .DS_Store
 public/system*
+public/assets*
 config/deploy.rb
 config/database.yml*

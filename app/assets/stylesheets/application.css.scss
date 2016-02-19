@@ -14,8 +14,8 @@
  *= require_directory .
  */
 
-body {
-	position: relative;
+html, body {
+  height: 100%;
 }
 
 .padding20 {
@@ -24,4 +24,7 @@ body {
 
 .form-control, .btn {
 	border-radius: 0;
+}
+.container-main {
+  min-height: 100%;
 }
